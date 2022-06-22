@@ -1,0 +1,45 @@
+.btn-primary{
+    width: 200px;
+    height: 200px;
+    margin: 17px;
+    background-image:url(./image/soleil.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: beige;
+}
+.btn-primary:hover{
+    background-color: darksalmon;
+}
+.container{
+    text-align: center;
+}
+img{
+    width: 200px;
+    height: 200px;
+    margin: 17px;
+}
+
+@media screen and (max-width: 990px){
+    .container{
+        margin: 0;
+    }
+    .btn-primary, img{
+        height: 100px;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 560px){
+    .btn-primary, img{
+        height: 80px;
+        width: 80px;
+    }
+}
+@media screen and (max-width: 480px){
+    .btn-primary, img{
+        height: 50px;
+        width: 50px;
+    }
+    .btn-primary{
+        font-size: 8px;
+    }
+}

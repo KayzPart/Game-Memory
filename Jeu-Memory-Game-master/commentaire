@@ -1,0 +1,185 @@
+/* ************************ JEU MEMOIRE ******************* */
+
+// Programmer le jeu très connu où il faut trouver toutes les paires d'une grille ! 
+
+// 1 ère Étape =>
+// - Programmer la partie HTML et l'affichage de la grille 
+
+// 2 ème Étape =>
+// Création du jeu avec une grille prédéfinies 
+
+// 3ème Étape =>
+// Génération d'une grille aléatoire
+
+//Récupérer la div #resultat
+
+// Je peux directement intégrer du texte dans cette div en rappelant la variable avec innerHTML
+// divResultat.innerHTML = "Coucou"; 
+
+/*Création de la grille pour cela je vais générer un tableau
+qui va contenir l'ensemble de nos éléments donc = 
+nos 4 ligne et nos 4 colonnes
+*/
+
+/* On créer donc un tableau multi-dimentionnel  
+4 ligne []
+qui ont 4 colonnes
+*/
+
+
+// 14) Afficher l'image correspondante au bouton qu'on a cliquer 
+// 14bis) Générer le tableau des resultat
+// Je vais maintenant l'utiliser pour afficher l'élément de ma grille 
+// 14bis2) Pour cela il faut que dans mon tableau de jeu (tableau afficher dans la page web) on indique la valeur correspondante une fois qu'on a cliquer 
+
+/* 24) Je mets en commentaire mon tableau qu'on va regénérer avec une fonction (voir ci-dessous */
+// var tabResultat = [
+//     [3,5,1,2],
+//     [8,7,8,4],
+//     [1,4,5,6],
+//     [7,6,3,2],
+// ];
+
+//25) elle es déclarer, maintenant je vais la créer tout en bas
+
+
+
+// 16)2) Je déclare la variable que j'initialise à vide
+
+// 17) Ensuite j'ai besoin de savoir ou j'en suis dans mes affichage
+// - Déjà une image d'afficher ou non ? - Je suis sur le premier click ou le deuxieme ? 
+
+// 17bis) Je vais donc rajouter une autre variable qui va conserver cela que j'initialise a 0
+// donc quand je click sur le premiere image +1 et sur la deuxieme +1 aussi
+
+
+// 17bis2) pour cela je vais aller dans ma fonction verif
+
+//19) Je déclare un booléen qui va permettre dire est ce qu'on peut cliquer sur un nouveau bouton ou pas 
+
+
+
+
+// OBJECTIF =>  Afficher la grille dans la div #resulat
+
+// Je créer donc une fonction. 
+
+//Cette fonction a pour objectif d'afficher notre tableau de jeu
+
+
+    
+    // 2)  Le texte qu'on va générer (la grille) va se baser sur le tableau de jeu
+
+    /* 3) On va parcourir notre tableau qui contient 4 lignes (on va les parcourir une à unes)
+
+    - J'utilise donc une boucle pour = for qui commence à 0
+    et qui s'arrête au nombres de lignes (nombre de ligne = tabJeu.length)
+    tabJeu.length contient 4 éléments 
+    A l'interieux de ces 4 éléments il y 4 éléments 
+
+    **********************************************************
+
+    Dans notre boucle for on va donc parcourir ces 4 éléments
+    console.log(tabJeu.length)
+
+    - Mon premier for va parcourir les lignes
+
+    i vaut 0; tant que i est plus petit que 4 je lui ajoute 1  */
+    
+
+        // 5) Après les étapes 1, 2, 3, et 4 nos boucles sont prêtes pour parcourir tous les éléments et générer notre grille 
+        // 6) Après notre 1er tour de boucle nous intégrer une div pour générer nos 4 lignes en HTML
+        // Je vais mettre  4 éléments à chaque fois dans les div 
+        // 6bis1) txt += "<div>" correspont à une ligne
+        // J'en aurais donc 4 grâce à la 1èrer boucle for
+
+        
+
+    // 4) - Mon deuxième for va parcourir les éléments de la ligne
+
+    /* j qui démarre à 0, j qui s'arrête a tabJeu de [i] (pour accèder à chacunes des lignes on utilise tabJeu[1])
+    On s'arrête donc quand tabJeu de [i] à parcouru tous les éléments dans toutes les lignes .length 
+    Si cela est bien le cas je lui ajoute 1 (j++) */
+
+    
+            /* 8) Test logique 
+                Si la valeur (tabJeu)de[i] et de [j] vaut 0 alors je voudrais afficher le bouton*/
+
+                
+                    // 7) à l'intérieur de ces lignes (<div>) il faut que je mette 4 boutons
+                // Je complète donc ma variable txt avec des boutons bootstrap
+                // 12) je rajoute la fonction onClick au quel je rajoute les pârametre 1-2
+                // 1 sera la ligne[i], 2 sera la colonne [j] je les concataine
+                // pour transformer en chaîne de caractère la verif je backslash \""\ pour désactiver les guillemets de la chaîne de caractère de notre txt
+
+                
+                // console.log(tabJeu);
+
+                
+            // Si jamais ce n'est pas zero alors je voudrais afficher une image 
+
+            
+                // 9) je vais générer mes images 
+                // 10bis) j'ajoute la fonction getImage qui va prendre la valeur tabJeu de i et de j 
+
+                
+        // 6bis2) et je la ferme à la fin de ma deuxieme boucle
+
+        
+    // 1) /* divResultat reçois un texte que je vais déclarer dans une var au début de ma fonction 
+
+    
+// 10) Pour afficher une image au numero correspont dans notre grille de jeux nous allons créer une nouvelle fonction 
+// Elle va donc vérifier la valeur et renvoyer l'image correspondante 
+
+
+    // 12) Je créer donc une variable
+
+    // 20) si jamais le boolean (ready) est a true et qu'on est prêt a faire les étapes de verification dans ce cas nous pourrons cliquer sur un nouveau bouton
+
+        //17bis3) j'incrémente nbAffiche (dès lors que je clique sur un bouton je rajoute +1)
+        // premier click sur un bouton de la grille nbAffiche aura la valeur 1 et je ne rentre pas dans le if
+        //2ème click sur un bouton nbAffiche aura la valeur 2 donc je rentre dans le if
+
+        
+        //13) Nous allons découper le bouton afin de récupérer la ligne et la colonne 
+        // On va donc générer deux variables
+
+        // var ligne qui va récupérer lélément qui a dans bouton.substr
+        // substr = substring = découper ma chaîne de caractère 
+        // Je veux récupérer le premier caractère  (le 1 )
+
+        
+
+        //Pour la colonne je veux récupérer le 2
+        // A partir du deuxième caractère jen veux 1
+
+        
+        // console.log(ligne);
+        // console.log(colonne);
+        //Je viens donc de récupérer la ligne et la colonne cliquer
+
+        // 14bis2) => DAns tabJeu je mets la valeurs de la ligne et de la colonne cliquer  de tabResultat
+
+        
+        // Pour l'instant on affiche seulement a afficher les image correspodante au tableaud des résultat que nous avons créer 
+
+        // 17bis3) Je lance la vérification
+        // Donc deux image de cliquer 
+
+        
+            //21) ensuite à lintérieur de la verification si on a cliquer sur le deuxieme bouton dans ce cas ready = false (on es plus prêt a cliquer sur un nouveau bouton et donc on lance le timeout donc on va réinitialiser le boolean ready a true et ensuite on réinitialisera les veleurs dans le tableau )
+
+            
+                //18 Verification plus complexe (verifier si ce qu'on a dans notre tableau de resultat à la position ligne.colonne correspond a notre tabJeu[ligne][colonne])
+            //tabJeu[ligne][colonne] (dernier élément qu'on a cliquer est ce que ca correspont ou non a tabResultat présent dans [oldSelection][0](la ligne) et en colonne est ce que sa correspont a oldselection de 1)
+
+            
+            // 16)
+        // Maintenant nous voulons faire une vérification pour que lorsqu'on clique sur 2 bouton on verifie si les images correspondent 
+        // Si elles se correspondent les images restent afficher 
+        // Sinon il faudra retourner les images (remettre la valeur 0 à l'intérieur de tabJeu)
+        // IL faut donc qu'on conserve le premier click et qu'on verifie le deuxième
+
+        // 16)bis1) Je rajoute donc l'information oldSelection (l'élément précédent cliquer) qui contiendra à chaque nouveau clique sur un bouton la valeur conserné (de ligne et colonne) = je le laisse à la fin de ma fonction**
+        
